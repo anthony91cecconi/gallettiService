@@ -1,1 +1,51 @@
-<p>navbar works!</p>
+<nav class="navbar">
+  <div class="navbar-left">
+    <img src="assets/logo.png" alt="Logo" class="logo" />
+
+    <div class="menu">
+      <div class="dropdown">
+        <span (click)="toggleDropdown('servizi')">servizi ▾</span>
+        <ul *ngIf="dropdownOpen === 'servizi'">
+          <li><a href="#">Servizio 1</a></li>
+          <li><a href="#">Servizio 2</a></li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <span (click)="toggleDropdown('soluzioni')">soluzioni ▾</span>
+        <ul *ngIf="dropdownOpen === 'soluzioni'">
+          <li><a href="#">Soluzione 1</a></li>
+          <li><a href="#">Soluzione 2</a></li>
+        </ul>
+      </div>
+      <a href="#">contatti</a>
+    </div>
+
+    <button class="emergency-call desktop-only">CHIAMA PER EMERGENZA</button>
+  </div>
+
+  <div class="navbar-right">
+    <div class="icons">
+      <img src="assets/whatsapp-icon.svg" alt="WhatsApp" (click)="callEmergenza()" />
+      <img src="assets/phone-icon.svg" alt="Phone" (click)="callEmergenza()" />
+      <img src="assets/emergency-icon.svg" alt="Emergenza" class="mobile-only red-alert" (click)="callEmergenza()" />
+    </div>
+
+    <div class="dropdown desktop-only who-we-are">
+      <div class="who-content" (click)="navigateToChiSiamo()">
+        <img src="assets/avatar.png" alt="Chi siamo" />
+        <div>
+          <div class="title">chi siamo</div>
+          <div class="subtitle">Secondary text</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <select>
+        <option>EMERGENZE 24/7</option>
+        <option>Emergenza 1</option>
+        <option>Emergenza 2</option>
+      </select>
+    </div>
+  </div>
+</nav>

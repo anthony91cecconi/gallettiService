@@ -1,0 +1,135 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  flex-wrap: wrap;
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+
+    .dropdown {
+      position: relative;
+
+      span {
+        cursor: pointer;
+      }
+
+      ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        list-style: none;
+        padding: 0.5rem;
+        border: 1px solid #ccc;
+        z-index: 100;
+
+        li {
+          padding: 0.3rem 0;
+          a {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  .emergency-call {
+    color: red;
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .icons img {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .red-alert {
+      width: 25px;
+      height: 25px;
+    }
+
+    .who-we-are {
+      display: flex;
+
+      .who-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+
+        .title {
+          font-weight: bold;
+        }
+
+        .subtitle {
+          font-size: 0.75rem;
+          color: gray;
+        }
+      }
+    }
+
+    select {
+      padding: 0.2rem 0.5rem;
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .navbar-right {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none;
+  }
+}
