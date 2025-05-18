@@ -7,6 +7,7 @@
   <div class="nav-container">
     <div>
       <ul>
+        <li><a class="home"  href="#">HOME</a><span></span></li>
         <li><span>Work &dtrif;</span>
           <ul class="dropdown">
             <li><a href="#">Web Development</a></li>
@@ -33,13 +34,28 @@
         </li>
       </ul>
     </div>
-    <div>
-
+    <div class="sos">
+      <i class="fa-solid fa-triangle-exclamation alert"></i>
+      <h1>CHIAMA PER EMERGENZA </h1>
+      <i class="fa-brands fa-whatsapp"></i>
+      <i class="fa-solid fa-phone"></i>
     </div>
   </div>
 
   <div class="utility">
-    a
-    <!--contiene la card chi simao e la sezione per le emergenze divise per pagine-->
+    <div class="card">
+      <img src="https://picsum.photos/200/300" alt="">
+      <div>
+        <h3>chi siamo</h3>
+        <h4>testo esempio</h4>
+      </div>
+    </div>
+
+    <select class="page-selector" (change)="onNavigate($event)">
+      <option value="/emergenze">EMERGENZE 24/7</option>
+      <option value="/contatti">CONTATTI</option>
+      <option value="/dove-siamo">DOVE SIAMO</option>
+    </select>
   </div>
+
 </nav>

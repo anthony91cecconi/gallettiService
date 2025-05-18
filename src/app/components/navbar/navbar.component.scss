@@ -1,7 +1,7 @@
 .navigation{
   display: flex;
   justify-content: space-around;
-  height: 6.5rem;
+  height: 8rem;
   background-color: white;
   @media screen and (max-width: 700px ) {
     flex-direction: column;
@@ -36,7 +36,6 @@
   }
 
   .nav-container{
-  background-color: blue;
     height: 100%;
     flex-grow: 5;
     ul {
@@ -45,6 +44,15 @@
       margin: 0;
       display: flex;
         li {
+        .home{
+          padding-right: 30px ;
+          color: #333;
+          text-decoration: none;
+          @media screen and (max-width: 700px ) {
+            padding-left: 30px ;
+          }
+        }
+        margin-top: 1rem;
         position: relative;
         .dropdown {
           display: none;
@@ -75,18 +83,98 @@
         }
       }
     }
+
+    .sos{
+      padding-top: 1rem;
+      display: flex;
+      justify-content: start;
+      gap: 1rem;
+      i{
+        font-size: 2rem;
+        color: darkgreen;
+      }
+      h1{
+        color: red;
+      }
+      .alert{
+        display:none;
+      }
+    }
     @media screen and (max-width: 700px ) {
+      .sos{
+        position: absolute;
+        top: 0;
+        right: 0;
+        flex-direction: column;
+        h1{
+          display: none;
+        }
+        .alert{
+          display:inline-block;
+          color:red;
+        }
+      }
       flex-grow: 2;
       height: auto;
     }
   }
 
   .utility{
-      background-color: green;
-      height: 100%;
-      flex-grow: 3;
-      @media screen and (max-width: 700px ) {
-        height: auto;
+    height: 100%;
+    flex-grow: 1;
+    padding: 0.5rem;
+    .card{
+      display: flex;
+      justify-content: start;
+      height: 4rem;
+      div{
+        border: 1px solid lightgray;
+        padding-top: 0.5rem;
+        padding-left: 0.5rem;
+        padding-right: 5rem;
+        h4{
+          color: gray;
+          font-size: 0.8rem;
+        }
+      }
+      img{
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+    .page-selector {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      border: 1px solid black;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 0.9rem;
+      color: black;
+      width: fit-content;
+      min-width: 200px;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='black' d='M2 0L0 2h4L2 0zM2 5L0 3h4l-2 2z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.5rem center;
+      background-size: 0.65rem auto;
+      padding-right: 1.5rem;
+    }
+    @media screen and (max-width: 800px ) {
+      .card{
+        div{
+          padding-right: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 700px ) {
+      height: auto;
+      .card{
+        display: none;
+      }
+      .page-selector {
+        width: 100%;
       }
     }
   }
+}
+
