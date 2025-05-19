@@ -8,7 +8,7 @@ import { SuccesComponent } from './pages/succes/succes.component';
 
 export const routes: Routes = [
   {path:"home", component: HomeComponent},
-  {path:"services",component: ServicesComponent},
+  {path:"servizi/spurgo",component: ServicesComponent},
   {path:"solutions",component: SolutionsComponent},
   {path: "sos",component: SosComponent},
   {path: "contact", component: ContactComponent},
