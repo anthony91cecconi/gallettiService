@@ -30,7 +30,7 @@
   flex-direction: column;
   align-items: center;
   max-height: 80vh;
-  overflow: scroll;
+  overflow-y: scroll;
   .card{
     width: 80vh;
     max-height: 20vh;
@@ -54,6 +54,24 @@
     @media screen and (max-width: 800px) {
       width: 100%;
       margin-right: 50px;
+    }
+  }
+}
+
+
+.items{
+  background-color: rgba($color: gray, $alpha: 0.2);
+  padding: 1rem;
+  .main-items{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba($color: gray, $alpha: 0.6);
+    .items-text{
+      h3{
+        text-align: center;
+      }
     }
   }
 }
