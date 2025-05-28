@@ -1,1 +1,42 @@
-<p>solutions works!</p>
+<app-navbar></app-navbar>
+<section class="main-section">
+  <main>
+    <h1>SOLUZIONI PER ......</h1>
+    <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eligendi sit voluptatibus dolorum, architecto aliquid explicabo. Quam obcaecati alias nemo expedita enim, necessitatibus cupiditate, corporis ipsam impedit, deleniti atque eos!
+    Quam non quis hic explicabo rem in excepturi repellendus minus temporibus dignissimos, aut ea dolorem optio molestiae consequatur. Dolor optio, rerum a accusamus dolore aliquid modi rem doloribus natus iusto.</P>
+    <div class="contact">
+      <div><i class="fa-solid fa-phone"></i></div>
+      <div>CONTATTACI PER UN SOVRALUOGO</div>
+      <div><i class="fa-solid fa-person-running"></i></div>
+    </div>
+    <div class="contact">
+      <div><i class="fa-solid fa-file-contract"></i></div>
+      <div>AVRAI UN PREVENTIVO E UN ACCORDO SUMISURA</div>
+      <div><i class="fa-solid fa-thumbs-up"></i></div>
+    </div>
+  </main>
+</section>
+
+<section class="c-container">
+  <div class="carousel-container">
+    <h2>SOLUZIONI STANDARD</h2>
+
+    <div class="carousel-overflow" (wheel)="onWheel($event)" #carouselOverflow>
+      <ul class="carousel">
+        <li *ngFor="let item of contents; let i = index"
+            (click)="changetext(i)"
+            [ngClass]="{'selected-item': item.select}">
+          <img src="https://picsum.photos/200/300" alt="">
+        </li>
+      </ul>
+    </div>
+    <div class="carousel-content">
+      <h3>{{content.title}}</h3>
+      <p>
+        {{content.text}}
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
