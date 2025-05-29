@@ -49,11 +49,11 @@
       </div>
     </div>
 
-    <select class="page-selector" (change)="onNavigate($event)">
-      <option value="/emergenze">EMERGENZE 24/7</option>
-      <option value="/contatti">CONTATTI</option>
-      <option value="/dove-siamo">DOVE SIAMO</option>
-    </select>
+    <a routerLink="/sos" class="emergency-link">
+      <div class="page-selector">
+        <span>EMERGENZE 24/7</span>
+      </div>
+    </a>
   </div>
 
 </nav>

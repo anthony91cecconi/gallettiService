@@ -15,6 +15,7 @@ import { DisinfestazioneComponent } from './pages/services/disinfestazione/disin
 
 export const routes: Routes = [
   {path:"home", component: HomeComponent},
+
   //servizzi
   {path: 'servizi/Spurgo', component: SpurgoComponent },
   {path: 'servizi/Videoispezioni', component: VideoispezioniComponent },
@@ -25,10 +26,7 @@ export const routes: Routes = [
   {path: 'servizi/Ristrutturazioni-edili', component: RistrutturazioniEdiliComponent },
   {path: 'servizi/Disinfestazione', component: DisinfestazioneComponent },
 
-
-
   {path:"soluzioni",component: SolutionsComponent},
-
 
   {path: "sos",component: SosComponent},
   {path: "contact", component: ContactComponent},

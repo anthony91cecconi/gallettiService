@@ -55,7 +55,9 @@
           color: #333;
           text-decoration: none;
           @media screen and (max-width: 700px ) {
-            padding-left: 30px ;
+
+
+            display: none ;
           }
         }
         margin-top: 1rem;
@@ -148,23 +150,7 @@
         width: 4rem;
       }
     }
-    .page-selector {
-      margin-top: 1rem;
-      padding: 0.5rem;
-      border: 1px solid black;
-      border-radius: 4px;
-      background-color: white;
-      font-size: 0.9rem;
-      color: black;
-      width: fit-content;
-      min-width: 200px;
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='black' d='M2 0L0 2h4L2 0zM2 5L0 3h4l-2 2z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 0.5rem center;
-      background-size: 0.65rem auto;
-      padding-right: 1.5rem;
-    }
+
     @media screen and (max-width: 800px ) {
       .card{
         div{
@@ -184,3 +170,56 @@
   }
 }
 
+.emergency-link {
+  text-decoration: none; // Rimuove la sottolineatura di default
+  color: #333; // Colore del testo di default
+
+  .page-selector {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 0.9rem;
+    color: black;
+    width: fit-content;
+    min-width: 200px;
+    appearance: none; // Utile per rimuovere stili di default su alcuni elementi
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 0.65rem auto;
+    padding-right: 1.5rem; // Spazio per l'eventuale icona di sfondo
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out; // Transizione fluida per il colore
+  }
+
+  /* Effetto hover */
+  &:hover {
+    .page-selector {
+      animation: color-cycle 2s infinite alternate; // Applica l'animazione al div interno
+    }
+  }
+}
+
+/* Definizione dell'animazione per il cambio colore */
+@keyframes color-cycle {
+  0% {
+    background-color: #f0f0f0; // Colore iniziale al 0% dell'animazione
+    color: #333;
+  }
+  25% {
+    background-color: #ffcccb; // Rosso chiaro
+    color: #e74c3c;
+  }
+  50% {
+    background-color: #d1ffd1; // Verde chiaro
+    color: #27ae60;
+  }
+  75% {
+    background-color: #ccf2ff; // Azzurro chiaro
+    color: #3498db;
+  }
+  100% {
+    background-color: #fffacd; // Giallo chiaro
+    color: #f39c12;
+  }
+}
