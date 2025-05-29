@@ -41,6 +41,13 @@ section{
       text-align: center;
       .navitem{
         flex-grow: 1;
+        background-color: rgba($color: lightblue, $alpha: 0.8);
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 2rem;
+        padding: 1rem;
+        border: 1px solid black;
       }
 
       .staf-title{

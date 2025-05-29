@@ -27,18 +27,16 @@
 <section>
     <div class="are-container">
       <div class="staf-header">
-        <div class="navitem"><</div>
+        <div (click)="back()" class="navitem"><i class="fa-solid fa-backward"></i></div>
         <div class="staf-title"><h2>STAFF</h2></div>
-        <div class="navitem">></div>
+        <div (click)="next()" class="navitem"><i class="fa-solid fa-forward"></i></div>
       </div>
 
       <div class="staf-content">
         <div class="content-item-left" ><img src="https://picsum.photos/200/300" alt=""></div>
         <div class="content-item-right" >
-          <h3>NOME</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ullam aliquam optio eligendi, quas nemo necessitatibus accusantium hic error nihil odit exercitationem voluptatibus obcaecati libero praesentium cumque ad ea. Fuga!
-          Nulla, recusandae. Dicta amet magni quae incidunt libero suscipit vero odio necessitatibus obcaecati! Unde quo cum minima eius! Consequatur dolor eum pariatur in culpa minus cumque praesentium cum reiciendis maiores?
-          Sit dolorum atque quas suscipit perspiciatis quo dolor ratione officia sequi ipsum, neque reprehenderit exercitationem quasi? Porro aliquam eligendi, ducimus, similique voluptatem, voluptas repellendus cum harum libero vel pariatur. Corporis.</p>
+          <h3>{{person.name}}</h3>
+          <p>{{person.content}}</p>
         </div>
       </div>
     </div>
