@@ -22,7 +22,7 @@ export class HomeComponent {
   currentIndex = 0;
   private intervalId: any;
 
-  constructor() { }
+  constructor() {}
 
   goToNext(): void {
     this.currentIndex = (this.currentIndex + 1) % this.slides.length;

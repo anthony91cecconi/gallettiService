@@ -12,6 +12,7 @@ import { SanificazioneComponent } from './pages/services/sanificazione/sanificaz
 import { IdraulicaComponent } from './pages/services/idraulica/idraulica.component';
 import { RistrutturazioniEdiliComponent } from './pages/services/ristrutturazioni-edili/ristrutturazioni-edili.component';
 import { DisinfestazioneComponent } from './pages/services/disinfestazione/disinfestazione.component';
+import { AreComponent } from './pages/are/are.component';
 
 export const routes: Routes = [
   {path:"home", component: HomeComponent},
@@ -29,7 +30,12 @@ export const routes: Routes = [
   {path:"soluzioni",component: SolutionsComponent},
 
   {path: "sos",component: SosComponent},
+
+  {path: "chi-siamo",component: AreComponent},
+
   {path: "contact", component: ContactComponent},
+
   {path: "succes" , component: SuccesComponent},
+
   {path: "**", redirectTo: "home" },
 ];
