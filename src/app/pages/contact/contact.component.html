@@ -1,1 +1,85 @@
-<p>contact works!</p>
+<app-navbar></app-navbar>
+
+<div class="form-wrapper">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <!-- NOME E COGNOME -->
+    <div>
+      <label for="fullName">Nome e Cognome</label>
+      <input id="fullName" type="text" formControlName="fullName" required>
+    </div>
+
+    <!-- OGGETTO -->
+    <div>
+      <label for="subject">Oggetto (opzionale)</label>
+      <input id="subject" type="text" formControlName="subject">
+    </div>
+
+    <!-- SERVIZIO -->
+    <div>
+      <label for="service">Servizio</label>
+      <select id="service" formControlName="service" required>
+        <option value="">Seleziona servizio</option>
+        <option value="elettricista">Elettricista</option>
+        <option value="idraulico">Idraulico</option>
+        <option value="fabbro">Fabbro</option>
+        <option value="altro">Altro</option>
+      </select>
+    </div>
+
+    <!-- INDIRIZZO -->
+    <div>
+      <label for="address">Indirizzo</label>
+      <input id="address" type="text" formControlName="address" required>
+    </div>
+
+    <!-- SOLUZIONE ATTIVA -->
+    <div>
+      <label for="hasSolution">
+        <input id="hasSolution" type="checkbox" formControlName="hasSolution">
+        Soluzione attiva
+      </label>
+    </div>
+
+    <!-- NUMERO SOLUZIONE -->
+    <div *ngIf="contactForm.get('hasSolution')?.value">
+      <label for="solutionNumber">Numero Soluzione</label>
+      <input id="solutionNumber" type="text" formControlName="solutionNumber">
+    </div>
+
+    <!-- DESCRIZIONE PROBLEMA -->
+    <div>
+      <label for="description">Descrizione Problema</label>
+      <textarea id="description" formControlName="description" required></textarea>
+    </div>
+
+    <!-- ALLEGA IMMAGINE -->
+    <div>
+      <label for="image">Allega immagine</label>
+      <input id="image" type="file" (change)="onImageChange($event)">
+      <div *ngIf="imagePreview">
+        <img [src]="imagePreview" alt="Anteprima immagine">
+      </div>
+    </div>
+
+    <!-- PULSANTE INVIO -->
+    <div>
+      <button type="submit" [disabled]="contactForm.invalid">INVIA</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="map-container">
+  <h3>Dove siamo</h3>
+  <iframe
+    width="100%"
+    height="300"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d991.389161432471!2d12.631360532080942!3d41.875416668875744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e3!4m0!4m3!3m2!1d41.87503277830628!2d12.631185096440037!5e0!3m2!1sit!2sit!4v1748595766807!5m2!1sit!2sit">
+  </iframe>
+</div>
+
+<app-footer></app-footer>
