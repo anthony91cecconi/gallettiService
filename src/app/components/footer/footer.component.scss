@@ -1,49 +1,115 @@
+/* Footer Generale */
 .footer {
-  width: 100%;
-  background-color: #b74118;
-  color: #1a1a1a;
-  padding: 1rem;
-  font-size: 0.9rem;
-  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    background-color: #b74118; /* Il tuo colore arancione scuro */
+    color: #f0f0f0; /* Un grigio molto chiaro per il testo, per maggiore contrasto */
+    padding: 2rem 1rem; /* Più padding sopra e sotto */
+    font-size: 0.95rem; /* Leggermente più grande */
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata per dare profondità */
+    position: relative; /* Utile se vuoi posizionare elementi al suo interno */
+    overflow: hidden; /* Per contenere eventuali sfondi o elementi extra */
 }
 
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+/* Contenitore principale per limitare larghezza e centrare */
+.footer-container {
+    max-width: 1200px; /* Larghezza massima del contenuto */
+    margin: 0 auto; /* Centra il contenitore */
+    display: flex;
+    flex-direction: column; /* Gli elementi interni si impilano */
+    align-items: center; /* Centra orizzontalmente gli elementi interni */
 }
 
-.footer-left {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  img{
-    max-width: 10rem;
-    max-height: 10rem;
-    border-radius: 50%;
-    @media screen and (max-width: 700px ) {
-      max-width: 8rem;
-      max-height: 8rem;
+/* Sezione Top (Logo e Info) */
+.footer-top-section {
+    display: flex;
+    flex-direction: column; /* Di default stacked */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .footer-top-section {
+        flex-direction: row; /* Su schermi più grandi, affianca */
+        justify-content: space-around; /* Spazia gli elementi */
+        align-items: flex-start; /* Allinea in alto gli elementi */
+        text-align: left;
     }
-  }
 }
 
-.footer-center {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 0.5rem;
+/* Stili del Logo */
+.footer-logo img {
+    max-width: 12rem; /* Leggermente più grande */
+    max-height: 12rem;
+    border-radius: 50%;
+    border: 3px solid #f0f0f0; /* Bordo chiaro intorno al logo */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem; /* Spazio sotto il logo */
 }
 
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1000px;
+@media screen and (min-width: 700px) {
+    .footer-logo img {
+        max-width: 10rem;
+        max-height: 10rem;
+        margin-right: 2rem; /* Spazio a destra del logo quando affiancato */
+        margin-bottom: 0; /* Rimuovi il margine inferiore quando affiancato */
+    }
 }
 
-.credits-left,
-.credits-right {
-  font-weight: bold;
+/* Stili delle Info Aziendali */
+.footer-info {
+    display: flex;
+    flex-direction: column; /* Stacked */
+    gap: 0.5rem; /* Spazio tra le righe di testo */
+    align-items: center; /* Centra il testo nelle righe */
+}
+
+@media screen and (min-width: 768px) {
+    .footer-info {
+        align-items: flex-start; /* Allinea il testo a sinistra quando affiancato */
+    }
+}
+
+.footer-info span {
+    color: #f0f0f0; /* Testo chiaro */
+    line-height: 1.5;
+    /* Puoi aggiungere iconcine qui con pseudoelementi se vuoi */
+}
+
+/* Separatore */
+.footer-separator {
+    width: 80%; /* Larghezza della linea */
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.3); /* Linea bianca semi-trasparente */
+    margin: 2rem 0; /* Spazio sopra e sotto il separatore */
+}
+
+/* Sezione Bottom (Crediti) */
+.footer-bottom-section {
+    display: flex;
+    flex-direction: column; /* Stacked di default */
+    align-items: center; /* Centra gli elementi */
+    width: 100%;
+    text-align: center;
+    gap: 0.8rem; /* Spazio tra i due testi dei crediti */
+}
+
+@media screen and (min-width: 600px) {
+    .footer-bottom-section {
+        flex-direction: row; /* Affianca su schermi più grandi */
+        justify-content: space-between; /* Spazia ai lati */
+    }
+    .credits-left {
+        margin-right: auto; /* Sposta a sinistra */
+    }
+    .credits-right {
+        margin-left: auto; /* Sposta a destra */
+    }
+}
+
+.credits-left strong,
+.credits-right strong {
+    color: #f0f0f0; /* Testo chiaro per i crediti */
+    font-size: 0.9em; /* Leggermente più piccolo */
 }
