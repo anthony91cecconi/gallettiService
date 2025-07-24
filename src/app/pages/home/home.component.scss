@@ -153,3 +153,71 @@ section{
     right: 10px;
   }
 }
+
+
+// stili aggiunti il 24/7/2025 da rivisionare in pulizia codice
+
+main {
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per l'Introduzione */
+.intro-section {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.intro-section h1 {
+    color: #2c3e50; /* Un blu scuro */
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.intro-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Stili per la Sezione Punti di Forza */
+.strengths-section {
+    margin-top: 30px;
+}
+
+.strengths-section h2 {
+    color: #2980b9; /* Un blu più chiaro per il sottotitolo */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.strengths-list {
+    list-style: none; /* Rimuove i bullet point di default */
+    padding: 0;
+}
+
+.strengths-list li {
+    background-color: #ecf0f1; /* Sfondo leggermente grigio per ogni elemento della lista */
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    display: flex; /* Per allineare icona e testo */
+    align-items: center; /* Centra verticalmente */
+    font-size: 1.05em;
+    line-height: 1.5;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.check-icon {
+    color: #27ae60; /* Verde brillante per il segno di spunta */
+    font-size: 1.5em;
+    margin-right: 15px;
+    font-weight: bold;
+}
