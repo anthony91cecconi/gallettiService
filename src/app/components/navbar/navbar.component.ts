@@ -20,4 +20,21 @@ export class NavbarComponent {
     const selectedRoute = target.value;
     this.router.navigateByUrl(selectedRoute);
   }
+
+
+  openWhatsApp() {
+    const phoneNumber = '393287863470';
+    const message = encodeURIComponent('Ciao, ho bisogno di assistenza urgente. Ti contatto dal sito GallettiService.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    // Apri il link in una nuova scheda
+    window.open(whatsappUrl, '_blank');
+  }
+
+  callNumber() {
+    const phoneNumber = '+393287863470';
+    const telUrl = `tel:${phoneNumber}`;
+
+    window.open(telUrl, '_self');
+  }
 }
