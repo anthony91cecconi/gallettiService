@@ -101,6 +101,9 @@
         &:hover > .dropdown {
           display: block;
         }
+        &.active-dropdown > .dropdown {
+          display: block;
+        }
       }
     }
 

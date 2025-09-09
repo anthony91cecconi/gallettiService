@@ -10,7 +10,8 @@
     <div>
       <ul>
         <li class="li-home"><a class="home" routerLink="home" >HOME</a><span></span></li>
-        <li><span>SERVIZI &dtrif;</span>
+        <li (click)="toggleDropdown()" [class.active-dropdown]="isDropdownActive">
+          <span>SERVIZI &dtrif;</span>
           <ul class="dropdown">
             <li><a routerLink="/servizi/Spurgo">Spurgo 24/7</a></li>
             <li><a routerLink="/servizi/Videoispezioni">Videoispezioni</a></li>

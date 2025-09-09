@@ -6,14 +6,21 @@ import { Router, RouterModule } from '@angular/router';
   selector: 'app-navbar',
   standalone: true,
   imports: [
-   CommonModule,
-   RouterModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  isDropdownActive: boolean = false; // Aggiungi questa variabile
+
   constructor(private router: Router) {}
+
+  // Aggiungi questo metodo
+  toggleDropdown() {
+    this.isDropdownActive = !this.isDropdownActive;
+  }
 
   onNavigate(event: Event): void {
     const target = event.target as HTMLSelectElement;
