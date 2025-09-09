@@ -20,7 +20,7 @@ export const routes: Routes = [
   //servizzi
   {path: 'servizi/Spurgo', component: SpurgoComponent },
   {path: 'servizi/Videoispezioni', component: VideoispezioniComponent },
-  {path: 'servizi/:Derattizzazione', component: DerattizzazioneComponent },
+  {path: 'servizi/Derattizzazione', component: DerattizzazioneComponent },
   {path: 'servizi/Antitarlo', component: AntitarloComponent },
   {path: 'servizi/Sanificazione', component: SanificazioneComponent },
   {path: 'servizi/Idraulica', component: IdraulicaComponent },
