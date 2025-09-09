@@ -24,7 +24,7 @@ export class NavbarComponent {
 
   openWhatsApp() {
     const phoneNumber = '393287863470';
-    const message = encodeURIComponent('Ciao, ho bisogno di assistenza urgente. Ti contatto dal sito GallettiService.');
+    const message = encodeURIComponent('Ciao, ho bisogno di assistenza urgente. Ti contatto dal sito GallettiSolution.');
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     // Apri il link in una nuova scheda
