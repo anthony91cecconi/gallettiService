@@ -14,9 +14,9 @@ import { FooterComponent } from '../../components/footer/footer.component';
 })
 export class HomeComponent {
  slides: any[] = [
-    { imageUrl: 'https://picsum.photos/200', altText: 'Descrizione immagine 1', title: 'test 1' },
-    { imageUrl: 'https://picsum.photos/200', altText: 'Descrizione immagine 2', title: 'test 2' },
-    { imageUrl: 'https://picsum.photos/200', altText: 'Descrizione immagine 3', title: 'test 3' },
+    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 1', title: 'test 1' },
+    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 2', title: 'test 2' },
+    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 3', title: 'test 3' },
   ];
 
   currentIndex = 0;

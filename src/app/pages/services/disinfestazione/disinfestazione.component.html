@@ -1,41 +1,49 @@
 <app-navbar></app-navbar>
 
-<section>
-  <div class="hero-container">
-    <img src="https://picsum.photos/200/300" alt="">
-    <h1>DISINFESTAZIONE</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eos nostrum labore laboriosam doloribus error accusantium laudantium modi mollitia, facilis explicabo atque distinctio beatae sit illo. Molestias, illo consectetur? Ab!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quibusdam aliquam, at facilis nulla dignissimos saepe modi minus architecto ea, reiciendis alias dicta, veniam unde laudantium et dolor ducimus quo.
-    </p>
-  </div>
+<!-- Hero Section -->
+<section class="hero-container" aria-labelledby="hero-title">
+  <h1 id="hero-title">DISINFESTAZIONE</h1>
+  <p>
+    Offriamo interventi mirati per eliminare insetti e parassiti da abitazioni, condomini, uffici, negozi e strutture pubbliche.
+    Grazie a tecniche avanzate e prodotti certificati, garantiamo risultati efficaci e duraturi, proteggendo la salute e il benessere degli ambienti.
+  </p>
+  <img src="https://picsum.photos/1200/500" alt="Servizio di disinfestazione professionale">
 </section>
 
-<section>
-  <h2 class="header-list">dettagli servizi</h2>
-  <ul class="container-list">
-    <li class="card">
-      <img src="https://picsum.photos/200/300" alt="">
+<!-- Servizi -->
+<section aria-labelledby="servizi">
+  <h2 id="servizi" class="header-list">Dettagli Servizi</h2>
+
+  <ul class="container-list" role="list">
+    <li class="card" *ngFor="let servizio of servizi">
+      <img [src]="servizio.img" [alt]="servizio.alt">
       <div class="content">
-        <h2>dettaglio</h2>
-        <p>spiegazione</p>
+        <h3>{{ servizio.titolo }}</h3>
+        <p>{{ servizio.descrizione }}</p>
+        <p *ngIf="servizio.extra">{{ servizio.extra }}</p>
       </div>
     </li>
   </ul>
 </section>
 
-<section class="items">
+<!-- Attrezzature -->
+<section class="items" aria-labelledby="attrezzature">
+  <h2 id="attrezzature" class="section-title" style="text-align: center;">ATTREZZATURE</h2>
+
   <div class="main-items">
-    <h2>ATTREZZATURE</h2>
     <div class="items-img">
-      <img src="https://picsum.photos/200/300" alt="">
+      <img src="https://picsum.photos/900/600" alt="Nebulizzatori e dispositivi per disinfestazione">
     </div>
+
     <div class="items-text">
-        <h3>NOME</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat officia velit iure! Ut nihil unde consequatur, necessitatibus eaque eligendi et corrupti laboriosam officiis, atque rem sunt explicabo, harum quasi saepe?</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, tempora velit, sint culpa ipsa consequatur at numquam incidunt cum modi natus quo molestias fugit deleniti quia. Dolorem nihil facere quidem?</p>
+      <h3>Tecniche e dotazioni professionali</h3>
+      <p>Utilizziamo metodologie e prodotti certificati, nel rispetto delle normative vigenti della Regione Lazio.</p>
+      <ul>
+        <li>Nebulizzatori/atomizzatori per trattamenti ULV</li>
+        <li>Esche e trappole per monitoraggi mirati in aree interne ed esterne</li>
+        <li>Prodotti registrati e sicuri per persone, animali e ambienti</li>
+        <li>DPI e procedure operative standardizzate per interventi in sicurezza</li>
+      </ul>
     </div>
   </div>
 </section>

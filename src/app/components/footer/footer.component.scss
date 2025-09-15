@@ -1,115 +1,107 @@
-/* Footer Generale */
 .footer {
-    width: 100%;
-    background-color: #b74118; /* Il tuo colore arancione scuro */
-    color: #f0f0f0; /* Un grigio molto chiaro per il testo, per maggiore contrasto */
-    padding: 2rem 1rem; /* Più padding sopra e sotto */
-    font-size: 0.95rem; /* Leggermente più grande */
-    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3); /* Ombra più pronunciata per dare profondità */
-    position: relative; /* Utile se vuoi posizionare elementi al suo interno */
-    overflow: hidden; /* Per contenere eventuali sfondi o elementi extra */
+  width: 100%;
+  background-color: #b74118;
+  color: #f0f0f0;
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Contenitore principale per limitare larghezza e centrare */
 .footer-container {
-    max-width: 1200px; /* Larghezza massima del contenuto */
-    margin: 0 auto; /* Centra il contenitore */
-    display: flex;
-    flex-direction: column; /* Gli elementi interni si impilano */
-    align-items: center; /* Centra orizzontalmente gli elementi interni */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Sezione Top (Logo e Info) */
 .footer-top-section {
-    display: flex;
-    flex-direction: column; /* Di default stacked */
-    align-items: center; /* Centra verticalmente */
-    text-align: center;
-    margin-bottom: 2rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-    .footer-top-section {
-        flex-direction: row; /* Su schermi più grandi, affianca */
-        justify-content: space-around; /* Spazia gli elementi */
-        align-items: flex-start; /* Allinea in alto gli elementi */
-        text-align: left;
-    }
+  .footer-top-section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
-/* Stili del Logo */
 .footer-logo img {
-    max-width: 12rem; /* Leggermente più grande */
-    max-height: 12rem;
-    border-radius: 50%;
-    border: 3px solid #f0f0f0; /* Bordo chiaro intorno al logo */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1.5rem; /* Spazio sotto il logo */
+  max-width: 12rem;
+  max-height: 12rem;
+  border-radius: 50%;
+  border: 3px solid #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 700px) {
-    .footer-logo img {
-        max-width: 10rem;
-        max-height: 10rem;
-        margin-right: 2rem; /* Spazio a destra del logo quando affiancato */
-        margin-bottom: 0; /* Rimuovi il margine inferiore quando affiancato */
-    }
+  .footer-logo img {
+    max-width: 10rem;
+    max-height: 10rem;
+    margin-right: 2rem;
+    margin-bottom: 0;
+  }
 }
 
-/* Stili delle Info Aziendali */
 .footer-info {
-    display: flex;
-    flex-direction: column; /* Stacked */
-    gap: 0.5rem; /* Spazio tra le righe di testo */
-    align-items: center; /* Centra il testo nelle righe */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
-    .footer-info {
-        align-items: flex-start; /* Allinea il testo a sinistra quando affiancato */
-    }
+  .footer-info {
+    align-items: flex-start;
+  }
 }
 
 .footer-info span {
-    color: #f0f0f0; /* Testo chiaro */
-    line-height: 1.5;
-    /* Puoi aggiungere iconcine qui con pseudoelementi se vuoi */
+  color: #f0f0f0;
+  line-height: 1.5;
 }
 
-/* Separatore */
 .footer-separator {
-    width: 80%; /* Larghezza della linea */
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.3); /* Linea bianca semi-trasparente */
-    margin: 2rem 0; /* Spazio sopra e sotto il separatore */
+  width: 80%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 2rem 0;
 }
 
-/* Sezione Bottom (Crediti) */
 .footer-bottom-section {
-    display: flex;
-    flex-direction: column; /* Stacked di default */
-    align-items: center; /* Centra gli elementi */
-    width: 100%;
-    text-align: center;
-    gap: 0.8rem; /* Spazio tra i due testi dei crediti */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  gap: 0.8rem;
 }
 
 @media screen and (min-width: 600px) {
-    .footer-bottom-section {
-        flex-direction: row; /* Affianca su schermi più grandi */
-        justify-content: space-between; /* Spazia ai lati */
-    }
-    .credits-left {
-        margin-right: auto; /* Sposta a sinistra */
-    }
-    .credits-right {
-        margin-left: auto; /* Sposta a destra */
-    }
+  .footer-bottom-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .credits-left {
+    margin-right: auto;
+  }
+  .credits-right {
+    margin-left: auto;
+  }
 }
 
 .credits-left strong,
 .credits-right strong {
-    color: #f0f0f0; /* Testo chiaro per i crediti */
-    font-size: 0.9em; /* Leggermente più piccolo */
+  color: #f0f0f0;
+  font-size: 0.9em;
 }

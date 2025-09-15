@@ -167,7 +167,7 @@ section main h1 {
 }
 
 /*=====================================
-  = Carousel Section
+  = Carousel Section (FIXED)
   =====================================*/
 
 .carousel-container {
@@ -179,31 +179,47 @@ section main h1 {
     border: 1px solid #ccc;
     background-color: #f9f9f9;
     margin-bottom: 2rem;
+
+    /* centrato e con larghezza massima */
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
 }
 
 .carousel-slide {
     flex: 1 0 100%;
     display: flex;
+    flex-direction: column;   /* immagine sopra, testo sotto */
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    gap: 12px;
+    padding: 16px;
     box-sizing: border-box;
 }
 
 .carousel-slide img {
-    max-width: 100%;
+    width: 100%;
+    max-width: 900px;                 /* limite su desktop */
+    max-height: clamp(220px, 60vh, 560px);
     height: auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
     margin-bottom: 10px;
 }
 
 .carousel-slide .slide-content {
-    padding: 1rem;
+    max-width: 900px;
     text-align: center;
+    padding: 0 .5rem;
 }
 
 .arrow {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #e5e7eb;
+    border-radius: 999px;
     font-size: 1.5rem;
     cursor: pointer;
     position: absolute;
@@ -230,6 +246,25 @@ section main h1 {
 }
 
 @media (max-width: 700px) {
+    .carousel-container {
+        max-width: 100%;
+        border-radius: 0;
+    }
+
+    .carousel-slide {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .carousel-slide img {
+        max-width: 100%;
+        max-height: 42vh;
+    }
+
+    .carousel-slide .slide-content {
+        padding: 0 .25rem;
+    }
+
     .arrow {
         display: none;
     }
