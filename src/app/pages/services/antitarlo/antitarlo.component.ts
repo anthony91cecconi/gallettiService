@@ -12,35 +12,41 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class AntitarloComponent implements OnInit {
+  baseImg = "/img/servizi/antitarlo/service/";
   servizi : any[]= [
     {
+      id : 1,
       titolo: 'Ispezione preliminare',
       descrizione: 'Ispezione con tecniche professionali per individuare la presenza e l’estensione dei tarli.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'ispezione_preliminare.png',
       alt: 'Ispezione preliminare antitarlo'
     },
     {
+      id : 2,
       titolo: 'Trattamenti mirati',
       descrizione: 'Interventi calibrati sul tipo di oggetto/struttura e sul grado di infestazione.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'trattamenti_mirati.png',
       alt: 'Trattamenti mirati contro i tarli'
     },
     {
+      id : 3,
       titolo: 'Prodotti certificati ed ecologici',
       descrizione: 'Soluzioni sicure per ambienti domestici e lavorativi, con prodotti certificati.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'prodotti_certificati.png',
       alt: 'Prodotti certificati ed ecologici'
     },
     {
+      id : 4,
       titolo: 'Protezione preventiva',
       descrizione: 'Applicazioni preventive per preservare il legno da future infestazioni.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'protezione_preventiva.png',
       alt: 'Protezione preventiva del legno'
     },
     {
+      id : 5,
       titolo: 'Assistenza post-trattamento',
       descrizione: 'Monitoraggio e consigli utili per la manutenzione nel tempo.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'assistenza.png',
       alt: 'Assistenza post trattamento antitarlo'
     }
   ];

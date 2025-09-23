@@ -12,29 +12,34 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class IdraulicaComponent implements OnInit {
+  baseImg = "/img/servizi/idraulica/service/";
   servizi: any[] = [
     {
+      id : 1,
       titolo: 'Riparazioni e pronto intervento',
       descrizione: 'Interventi rapidi per perdite, guasti, allagamenti e tubazioni danneggiate.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'pronto_intervento.png',
       alt: 'Riparazioni idrauliche'
     },
     {
+      id : 2,
       titolo: 'Installazioni impianti',
       descrizione: 'Installazione di impianti idraulici civili e commerciali, con materiali certificati.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'Installazioni_impianti.png',
       alt: 'Installazione impianti idraulici'
     },
     {
+      id : 3,
       titolo: 'Manutenzioni programmate',
       descrizione: 'Controlli e manutenzioni periodiche per garantire efficienza e sicurezza.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'Manutenzioni_programmate.png',
       alt: 'Manutenzione impianti idraulici'
     },
     {
+      id : 4,
       titolo: 'Bagni e cucine',
       descrizione: 'Realizzazione e ristrutturazione completa di bagni e cucine con opere idrauliche su misura.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'Bagni.png',
       alt: 'Ristrutturazioni idrauliche bagni e cucine'
     }
   ];

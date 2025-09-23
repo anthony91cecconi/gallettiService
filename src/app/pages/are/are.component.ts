@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ServiceListComponent } from "../../components/service-list/service-list.component";
 
 @Component({
   selector: 'app-are',
   standalone: true,
-  imports: [NavbarComponent,FooterComponent],
+  imports: [NavbarComponent, FooterComponent, ServiceListComponent],
   templateUrl: './are.component.html',
   styleUrl: './are.component.scss'
 })

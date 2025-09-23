@@ -167,7 +167,7 @@ section main h1 {
 }
 
 /*=====================================
-  = Carousel Section (FIXED)
+  = Carousel Section (Staff)
   =====================================*/
 
 .carousel-container {
@@ -176,17 +176,22 @@ section main h1 {
     width: 100%;
     position: relative;
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    border: 1px solid #e5e7eb;
+    background-color: #f9fafb;
     margin-bottom: 2rem;
 
     /* centrato e con larghezza massima */
-    max-width: 1100px;
+    max-width: 980px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 10px;
+    border-radius: 14px;
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+    padding: clamp(8px, 2vw, 16px);
+    box-sizing: border-box;
+    gap: 8px;
 }
 
+/* Wrapper contenuto slide (immagine + testo) */
 .carousel-slide {
     flex: 1 0 100%;
     display: flex;
@@ -194,77 +199,128 @@ section main h1 {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    padding: 16px;
+    padding: clamp(8px, 1.6vw, 16px);
     box-sizing: border-box;
-}
-
-.carousel-slide img {
-    width: 100%;
-    max-width: 900px;                 /* limite su desktop */
-    max-height: clamp(220px, 60vh, 560px);
-    height: auto;
-    object-fit: contain;
-    display: block;
-    border-radius: 8px;
-    border: 1px solid #e5e7eb;
-    margin-bottom: 10px;
-}
-
-.carousel-slide .slide-content {
-    max-width: 900px;
     text-align: center;
+}
+
+/* Immagine staff:
+   - proporzionata (contain)
+   - dimensione contenuta
+   - rapporto visivo gradevole anche per ritratti
+*/
+.carousel-slide img {
+    display: block;
+    width: min(100%, 540px);
+    height: auto;
+    max-height: clamp(220px, 48vh, 420px);
+    object-fit: contain;
+    object-position: center;
+
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #0f172a; /* letterbox scuro dietro se l'immagine non riempie */
+    padding: 8px;        /* cornice interna per respiro */
+    box-shadow: 0 8px 22px rgba(2, 6, 23, .12);
+    transition: transform .25s ease;
+}
+
+.carousel-container:active .carousel-slide img {
+    transform: scale(.995);
+}
+
+/* Testo sotto l'immagine */
+.carousel-slide .slide-content {
+    width: min(100%, 680px);
     padding: 0 .5rem;
 }
 
+.carousel-slide .slide-content h3 {
+    margin: 0 0 .25rem 0;
+    font-size: clamp(1rem, 2.2vw, 1.4rem);
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.carousel-slide .slide-content p {
+    margin: 0;
+    font-size: clamp(.9rem, 1.8vw, 1rem);
+    color: #475569;
+    word-break: break-word;
+}
+
+/* Frecce */
 .arrow {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.92);
     border: 1px solid #e5e7eb;
     border-radius: 999px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    padding: 10px;
+    padding: 10px 12px;
     z-index: 10;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
 }
 
 .arrow i {
-    color: #333;
+    color: #0f172a;
+    line-height: 1;
 }
 
 .arrow:hover {
-    opacity: 0.8;
+    transform: translateY(-50%) scale(1.04);
+    background: #fff;
+    box-shadow: 0 10px 24px rgba(0,0,0,.15);
+}
+
+.arrow:active {
+    transform: translateY(-50%) scale(.98);
+}
+
+.arrow:focus-visible {
+    outline: 3px solid #0ea5e9;
+    outline-offset: 2px;
 }
 
 .arrow.left-arrow {
-    left: 10px;
+    left: 8px;
 }
 
 .arrow.right-arrow {
-    right: 10px;
+    right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .carousel-container {
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .carousel-slide img {
+        width: min(100%, 440px);
+        max-height: clamp(200px, 46vh, 380px);
+    }
 }
 
 @media (max-width: 700px) {
     .carousel-container {
-        max-width: 100%;
-        border-radius: 0;
+        padding: 10px;
+        border-radius: 8px;
     }
-
     .carousel-slide {
-        padding: 12px;
+        padding: 10px;
         gap: 10px;
     }
-
     .carousel-slide img {
-        max-width: 100%;
+        width: min(100%, 360px);
         max-height: 42vh;
+        padding: 6px;
+        border-radius: 10px;
     }
-
-    .carousel-slide .slide-content {
-        padding: 0 .25rem;
-    }
-
+    /* Niente frecce su mobile: si può toccare l'area per avanzare */
     .arrow {
         display: none;
     }
@@ -272,7 +328,9 @@ section main h1 {
 
 @media (max-width: 400px) {
     .carousel-slide img {
-        max-width: 6rem;
+        width: 100%;
+        max-height: 36vh;
+        /* rimosso il precedente limite 6rem che rendeva le immagini minuscole */
     }
 }
 

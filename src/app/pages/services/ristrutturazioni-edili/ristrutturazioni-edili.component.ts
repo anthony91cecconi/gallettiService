@@ -12,29 +12,30 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class RistrutturazioniEdiliComponent implements OnInit {
+  baseImg = "/img/servizi/restrutturazioni/service/";
   servizi:any[] = [
     {
       titolo: 'Rifacimento bagni e cucine',
       descrizione: 'Ristrutturazione completa o parziale di bagni, cucine e altre stanze con materiali certificati.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'bagni_cucine.png',
       alt: 'Rifacimento bagni e cucine'
     },
     {
       titolo: 'Facciate e tetti',
       descrizione: 'Restauro e manutenzione di facciate e coperture, impermeabilizzazioni e coibentazioni.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'facciate_tetti.png',
       alt: 'Restauro facciate e tetti'
     },
     {
       titolo: 'Opere murarie e impianti',
       descrizione: 'Opere murarie, impiantistica idraulica/elettrica e adeguamenti alle normative.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'impianti.png',
       alt: 'Opere murarie e impiantistiche'
     },
     {
       titolo: 'Rifiniture e posa pavimenti',
       descrizione: 'Finiture di pregio, cartongesso, tinteggiature e posa di pavimenti e rivestimenti.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'pavimenti.png',
       alt: 'Rifiniture e posa pavimenti'
     }
   ];

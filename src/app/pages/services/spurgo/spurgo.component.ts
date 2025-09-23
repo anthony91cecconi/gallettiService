@@ -12,36 +12,42 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class SpurgoComponent implements OnInit {
+  baseImg = "/img/servizi/spurgo/service/";
   servizi: any[] = [
     {
+      id: 1,
       titolo: 'Fosse biologiche e pozzi neri',
       descrizione: 'Spurgo e pulizia di fosse biologiche, pozzi neri e reti fognarie.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+'Fosse_biologiche_e_pozzi_neri.png',
       alt: 'Spurgo fosse biologiche'
     },
     {
+      id: 2,
       titolo: 'Cisterne',
       descrizione: 'Svuotamento e manutenzione di vasche e cisterne.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+'cisterne.png',
       alt: 'Svuotamento e manutenzione cisterne'
     },
     {
+      id: 3,
       titolo: 'Tubazioni e scarichi',
       descrizione: 'Disostruzione tubazioni e scarichi intasati con tecniche ad alta pressione.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+'tubazioni_e_scarichi.png',
       alt: 'Disostruzione tubazioni e scarichi'
     },
     {
+      id: 4,
       titolo: 'Videoispezioni',
       descrizione: 'Videoispezioni fognarie per individuare guasti e perdite.',
       extra: 'Il nostro servizio permette di analizzare in modo preciso e non invasivo lo stato delle tubazioni, evitando interventi distruttivi.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+'Videoispezioni.png',
       alt: 'Videoispezione tubazioni'
     },
     {
+      id: 5,
       titolo: 'Smaltimento rifiuti liquidi',
       descrizione: 'Smaltimento rifiuti liquidi nel rispetto delle normative ambientali.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+'smaltimento_rifiuti_liquidi.png',
       alt: 'Smaltimento rifiuti liquidi'
     }
   ];

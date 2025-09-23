@@ -26,6 +26,7 @@ export const routes: Routes = [
   {path: 'servizi/Idraulica', component: IdraulicaComponent },
   {path: 'servizi/Ristrutturazioni-edili', component: RistrutturazioniEdiliComponent },
   {path: 'servizi/Disinfestazione', component: DisinfestazioneComponent },
+  {path: 'servizi/Idraulica', component: IdraulicaComponent },
 
   {path:"soluzioni",component: SolutionsComponent},
 

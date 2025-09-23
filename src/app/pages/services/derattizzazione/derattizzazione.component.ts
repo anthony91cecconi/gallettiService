@@ -12,20 +12,15 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class DerattizzazioneComponent implements OnInit {
+  baseImg = "/img/servizi/derattizzazione/service/";
   servizi :any[] = [
     {
+      id: 1,
       titolo: 'Derattizzazione',
       descrizione: 'Ispezione accurata degli ambienti per individuare focolai e vie di accesso.',
       extra: 'Utilizzo di prodotti certificati e sicuri per persone e animali domestici. Monitoraggio continuo per garantire risultati duraturi.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg+ 'Derattizzazione.png',
       alt: 'Intervento di derattizzazione'
-    },
-    {
-      titolo: 'Antitarlo',
-      descrizione: 'Trattamento specializzato per eliminare l’infestazione e proteggere il legno a lungo termine.',
-      extra: 'Ispezione preliminare, trattamenti mirati in base al tipo di legno e al grado di infestazione, utilizzo di prodotti certificati ed ecologici. Protezione preventiva e assistenza post-trattamento.',
-      img: 'https://picsum.photos/640/400',
-      alt: 'Trattamento antitarlo su mobili e strutture'
     }
   ];
 

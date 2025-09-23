@@ -1,0 +1,97 @@
+.con {
+  /* Variabili locali al componente (non servono :root) */
+  --bg: #0f1115;
+  --card: #171a21;
+  --text: #e7e9ee;
+  --muted: #9aa3b2;
+  --accent: #29b87d;
+  --ring: rgba(41, 184, 125, .35);
+  --border: rgba(255, 255, 255, .08);
+
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, "Helvetica Neue", Arial;
+  line-height: 1.6;
+}
+
+/* Contenitore sezione */
+.services {
+  max-width: 1100px;
+  margin: clamp(16px, 3vw, 40px) auto;
+  padding: 0 16px;
+
+  h2 {
+    font-size: clamp(1.4rem, 2.8vw, 2rem);
+    letter-spacing: .02em;
+    margin: 0 0 12px;
+  }
+}
+
+/* Griglia carte */
+.service-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Card */
+.service {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, .02), rgba(255, 255, 255, .01)),
+    var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  min-width: 0;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px -12px var(--ring), 0 1px 0 0 var(--border) inset;
+    border-color: rgba(41, 184, 125, .5);
+  }
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: conic-gradient(from 180deg, var(--accent), #6be3b0 70%, var(--accent));
+      box-shadow: 0 0 0 6px rgba(41, 184, 125, .12);
+      /* Fallback se il browser non supporta conic-gradient */
+      @supports not (background: conic-gradient(red, blue)) {
+        background: var(--accent);
+      }
+    }
+  }
+
+  /* Lista interna della card */
+  > ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    list-style: disc;
+
+    li { margin: .25rem 0; }
+  }
+}
+
+/* Responsive */
+@media (min-width: 720px) {
+  .service-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+@media (min-width: 1024px) {
+  .service-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+}

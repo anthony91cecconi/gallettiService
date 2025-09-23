@@ -1,24 +1,42 @@
+/* Layout base */
 section {
   min-height: 60vh;
 
   .sos-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    --bg: #fff;
+    --ink: #111;
+    --muted: #444;
+    --chip: #e8f5ea;
+    --chip-b: #2f7a3a;
+
+    display: grid;
+    gap: 1rem;
     margin: 1rem !important;
-    background-color: white;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--ink);
 
     .sos-header {
-      border: 1px solid black;
-      width: 100%;
+      border-bottom: 1px solid var(--ink);
       text-align: center;
       padding: 1rem;
+
+      h1 {
+        margin: 0;
+        letter-spacing: .08em;
+      }
     }
 
+    /* Contenuto: due colonne su desktop, una su mobile */
     .sos-content {
-      display: flex;
-      border: 1px solid black;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+
+      @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+      }
 
       ul {
         list-style: none;
@@ -27,71 +45,91 @@ section {
         unicode-bidi: isolate;
       }
 
+      /* Box generico colonna */
       .sos-item {
-        flex-grow: 1;
-        max-width: 50%;
+        border: 1px solid var(--ink);
         padding: 1rem;
-        border: 1px solid black;
+        display: grid;
+        gap: 1rem;
 
         p {
-          padding: 1rem;
+          margin: 0;
         }
 
+        /* Testo introduttivo compatto */
+        .intro {
+          font-size: 0.975rem;
+          line-height: 1.55;
+          color: var(--muted);
+        }
+
+        /* Contatti */
         .sos-contact {
-          margin-bottom: 2rem;
+          ul {
+            display: grid;
+            gap: .5rem;
+          }
 
           li {
-            padding: 1rem 1rem 1rem 0;
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            align-items: center;
+            gap: .5rem;
+            padding: .5rem 0;
+            border-bottom: 1px dashed var(--ink);
+
+            &:last-child { border-bottom: 0; }
 
             span {
-              display: inline-block;
-              width: 10rem;
-              text-align: center;
-
-              @media screen and (max-width: 700px) {
-                max-width: 40%;
-                font-size: 0.8rem;
-              }
+              display: block;
             }
 
             .recap {
-              text-align: start;
-              margin-left: 1rem;
+              font-variation-settings: "wght" 600;
+            }
+
+            @media (max-width: 700px) {
+              grid-template-columns: 1fr;
+              gap: .25rem;
+
+              .recap { font-size: .95rem; }
             }
           }
         }
 
-        @media screen and (max-width: 700px) {
-          max-width: 100% !important;
-        }
-      }
+        /* Zone chip */
+        .sos-zon {
+          h2 {
+            text-align: center;
+            margin: 0 0 .75rem;
+            font-size: 1.05rem;
+            letter-spacing: .02em;
+          }
 
-      .sos-zon {
-        h2 {
-          text-align: center;
-          margin-bottom: 1rem;
-        }
+          .zon {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: .5rem;
 
-        .zon {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          gap: 10px;
-
-          li {
-            padding: 0.5rem;
-            background-color: green;
-            border: 1px solid black;
-            border-radius: 10%;
+            li {
+              padding: .45rem .65rem;
+              background: var(--chip);
+              border: 1px solid var(--chip-b);
+              border-radius: 8px;
+              font-size: .95rem;
+              white-space: nowrap;
+            }
           }
         }
       }
-    }
-  }
-}
 
-.no-smart {
-  @media screen and (max-width: 700px) {
-    display: none;
+      /* La colonna con solo testo si nasconde su mobile */
+      .no-smart {
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+    }
   }
 }

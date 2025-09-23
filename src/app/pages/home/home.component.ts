@@ -1,22 +1,28 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
+import { ServiceListComponent } from "../../components/service-list/service-list.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     NavbarComponent,
-    FooterComponent
-  ],
+    ServiceListComponent,
+    FooterComponent,
+    ServiceListComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
  slides: any[] = [
-    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 1', title: 'test 1' },
-    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 2', title: 'test 2' },
-    { imageUrl: '/img/personal/neutro.png', altText: 'Descrizione immagine 3', title: 'test 3' },
+    //nato il 2000
+    { imageUrl: '/img/personal/neutro.png', altText: 'Davide Galletti', title: 'Davide Galletti', text: "" },
+    //nato il 1997
+    { imageUrl: '/img/personal/neutro.png', altText: 'Simone Galletti', title: 'Simone Gallett', text: "" },
+    //nato il 1968
+    { imageUrl: '/img/personal/neutro.png', altText: 'Alfredo Galletti', title: 'Alfredo Galletti', text: "" },
   ];
 
   currentIndex = 0;

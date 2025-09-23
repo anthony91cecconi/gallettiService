@@ -12,30 +12,28 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: '../services.component.scss'
 })
 export class DisinfestazioneComponent implements OnInit {
+  baseImg = "/img/servizi/disinfestazione/service/";
   servizi :any[]= [
     {
+      id: 1,
       titolo: 'Insetti volanti e striscianti',
       descrizione: 'Disinfestazione mirata di zanzare, mosche, vespe, blatte, formiche e altri infestanti.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'volanti.png',
       alt: 'Disinfestazione insetti volanti e striscianti'
     },
     {
+      id: 2,
       titolo: 'Interventi in condomini e aree esterne',
       descrizione: 'Azioni specifiche per spazi comuni condominiali, aree verdi e perimetrali.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'condomini_aree_esterne.png',
       alt: 'Interventi in condomini e spazi comuni'
     },
     {
+      id: 3,
       titolo: 'Prevenzione e monitoraggio',
       descrizione: 'Piani di prevenzione e monitoraggio per evitare future infestazioni.',
-      img: 'https://picsum.photos/640/400',
+      img: this.baseImg + 'prevenzione_monitoraggio.png',
       alt: 'Piani di prevenzione e monitoraggio'
-    },
-    {
-      titolo: 'Prodotti certificati e personale qualificato',
-      descrizione: 'Prodotti sicuri e conformi alle normative della Regione Lazio, personale qualificato.',
-      img: 'https://picsum.photos/640/400',
-      alt: 'Prodotti certificati e personale qualificato'
     }
   ];
 
