@@ -17,7 +17,7 @@ import { Router } from '@angular/router';
 export class ContactComponent {
   contactForm: FormGroup;
   imagePreview: string | ArrayBuffer | null = null;
-  isSubmitting = false; // 🔹 blocca invii multipli
+  isSubmitting = false;
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.contactForm = this.fb.group({
