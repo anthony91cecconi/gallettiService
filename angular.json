@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "gallettiService": {
+    "GallettiSolution": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "gallettiService:build:production"
+              "buildTarget": "GallettiSolution:build:production"
             },
             "development": {
-              "buildTarget": "gallettiService:build:development"
+              "buildTarget": "GallettiSolution:build:development"
             }
           },
           "defaultConfiguration": "development"

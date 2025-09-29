@@ -100,3 +100,15 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 }
+
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border: 1px solid #e74c3c;
+  background-color: #fff6f6;
+}
+
+small {
+  color: #e74c3c;
+  font-size: 0.85rem;
+}
